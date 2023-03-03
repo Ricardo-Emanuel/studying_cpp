@@ -1,6 +1,15 @@
 # include <iostream>
 using namespace std;
 
+/*
+* Traverse the entire array changing the elements
+* in order to put the biggest element on the end
+* of the array or vector.
+* So this literally works based on bubbling the
+* biggest elements to the end of the data structure
+* until it finish.
+*/
+
 void bubbleSort(int arr[], int size) {
 
     // O(N^2)

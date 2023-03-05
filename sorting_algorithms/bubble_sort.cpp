@@ -10,6 +10,10 @@ using namespace std;
 * until it finish.
 */
 
+bool compare(int a, int b) {
+    return a < b;
+}
+
 void bubbleSort(int arr[], int size) {
 
     // O(N^2)
@@ -25,7 +29,7 @@ void bubbleSort(int arr[], int size) {
         itself, that's why it analyzes
         */
         for (int j = 0; j < size - i - 1; j++) {
-            if (arr[j] > arr[j+1]) {
+            if (compare(arr[j], arr[j+1])) {
                 swap(arr[j], arr[j+1]);
             }
         }
@@ -63,12 +67,12 @@ int main() {
     int arr[] = {1,2,3,4,5,6,7,8,9,10,11,12,13};
     int size = sizeof(arr) / sizeof(int);
 
-    bubbleSortOptimized(arr, size);
+    // bubbleSortOptimized(arr, size);
     bubbleSort(arr, size);
 
-    /*for (auto x : arr) {
+    for (auto x : arr) {
         cout << x << ", ";
-    }*/
+    }
 
     return 0;
 }
